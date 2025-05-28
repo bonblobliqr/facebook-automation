@@ -1,0 +1,118 @@
+/* Styles for Facebook Automation Tool */
+
+/* Highlight elements for debugging */
+.fb-automation-highlight-red {
+  outline: 3px solid red !important;
+  outline-offset: 2px !important;
+  position: relative !important;
+  z-index: 9999 !important;
+}
+
+.fb-automation-highlight-green {
+  outline: 3px solid green !important;
+  outline-offset: 2px !important;
+  position: relative !important;
+  z-index: 9999 !important;
+}
+
+.fb-automation-highlight-blue {
+  outline: 3px solid blue !important;
+  outline-offset: 2px !important;
+  position: relative !important;
+  z-index: 9999 !important;
+}
+
+/* Tooltip for user feedback */
+.fb-automation-tooltip {
+  position: fixed !important;
+  bottom: 20px !important;
+  left: 20px !important;
+  background: rgba(67, 97, 238, 0.95) !important;
+  color: white !important;
+  padding: 12px 18px !important;
+  border-radius: 8px !important;
+  z-index: 10000 !important;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif !important;
+  font-size: 14px !important;
+  max-width: 80% !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+  animation: slideIn 0.3s ease-out !important;
+  border-left: 4px solid #3a56d4 !important;
+  font-weight: 500 !important;
+  line-height: 1.5 !important;
+}
+
+@keyframes slideIn {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Success tooltip variant */
+.fb-automation-tooltip.success {
+  background: rgba(6, 214, 160, 0.95) !important;
+  border-left: 4px solid #059669 !important;
+}
+
+/* Error tooltip variant */
+.fb-automation-tooltip.error {
+  background: rgba(239, 71, 111, 0.95) !important;
+  border-left: 4px solid #be123c !important;
+}
+
+/* Warning tooltip variant */
+.fb-automation-tooltip.warning {
+  background: rgba(255, 209, 102, 0.95) !important;
+  border-left: 4px solid #d97706 !important;
+  color: #2b2d42 !important;
+}
+
+/* Progress indicator */
+.fb-automation-progress {
+  position: fixed !important;
+  top: 20px !important;
+  right: 20px !important;
+  background: white !important;
+  border-radius: 8px !important;
+  padding: 12px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+  z-index: 10000 !important;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif !important;
+  min-width: 200px !important;
+  border: 1px solid rgba(67, 97, 238, 0.2) !important;
+}
+
+.fb-automation-progress-title {
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  margin-bottom: 8px !important;
+  color: #2b2d42 !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.fb-automation-progress-title::before {
+  content: '⚙️' !important;
+  margin-right: 6px !important;
+}
+
+.fb-automation-progress-bar-container {
+  height: 8px !important;
+  background: #e0e2f0 !important;
+  border-radius: 4px !important;
+  overflow: hidden !important;
+  margin-bottom: 8px !important;
+}
+
+.fb-automation-progress-bar {
+  height: 100% !important;
+  background: linear-gradient(90deg, #4361ee, #3a56d4) !important;
+  border-radius: 4px !important;
+  transition: width 0.3s ease !important;
+}
+
+.fb-automation-progress-stats {
+  display: flex !important;
+  justify-content: space-between !important;
+  font-size: 12px !important;
+  color: #5a5d7a !important;
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Facebook Automation Tool</title>
+  <link rel="stylesheet" href="popup.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Facebook Automation Tool</h1>
+    </header>
+    
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="bot">Bot Control</button>
+      <button class="tab-btn" data-tab="messages">Messages</button>
+      <button class="tab-btn" data-tab="data">Data Import</button>
+    </div>
+    
+    <div class="tab-content">
+      <!-- Bot Control Tab -->
+      <div id="bot" class="tab-pane active">
+        <div class="status-card">
+          <div class="status-indicator" id="botStatus">Stopped</div>
+          <div class="status-details">
+            <p>Messages sent: <span id="messagesSent">0</span></p>
+            <p>Queue remaining: <span id="queueRemaining">0</span></p>
+          </div>
+        </div>
+        
+        <div class="control-buttons">
+          <button id="startBot" class="btn primary">Start Bot</button>
+          <button id="pauseBot" class="btn warning" disabled>Pause Bot</button>
+          <button id="stopBot" class="btn danger" disabled>Stop Bot</button>
+        </div>
+        
+        <div class="settings">
+          <h3>Bot Settings</h3>
+          <div class="setting-item">
+            <label>Delay between messages:</label>
+            <div class="delay-range">
+              <input type="number" id="minDelay" min="30" max="1200" value="60" class="delay-input">
+              <span class="delay-separator">to</span>
+              <input type="number" id="maxDelay" min="30" max="1200" value="120" class="delay-input">
+              <span class="delay-unit">seconds</span>
+            </div>
+          </div>
+          <div class="setting-item">
+            <label for="typingSpeed">Typing speed:</label>
+            <select id="typingSpeed">
+              <option value="slow">Slow</option>
+              <option value="medium" selected>Medium</option>
+              <option value="fast">Fast</option>
+            </select>
+          </div>
+          <div class="setting-item checkbox-setting">
+            <input type="checkbox" id="newLeadsOnly" class="custom-checkbox">
+            <label for="newLeadsOnly" class="checkbox-label">New leads only</label>
+            <div class="setting-description">Skip profiles with existing conversation history</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Messages Tab -->
+      <div id="messages" class="tab-pane">
+        <div class="message-templates">
+          <h3>Message Templates</h3>
+          <div class="template-list" id="templateList">
+            <!-- Templates will be added here -->
+          </div>
+          
+          <div class="template-editor">
+            <h4>Create New Template</h4>
+            <input type="text" id="templateName" placeholder="Template name">
+            <textarea id="templateContent" placeholder="Message content. Use <first_name> for placeholders and {option1|option2} for variations."></textarea>
+            <div class="template-actions">
+              <button id="saveTemplate" class="btn primary">Save Template</button>
+              <button id="previewTemplate" class="btn secondary">Preview</button>
+            </div>
+          </div>
+          
+          <div class="template-preview" id="templatePreview">
+            <h4>Preview</h4>
+            <div class="preview-content"></div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Data Import Tab -->
+      <div id="data" class="tab-pane">
+        <div class="data-import">
+          <h3>Import Contacts</h3>
+          
+          <div class="import-option">
+            <h4>Upload CSV File</h4>
+            <input type="file" id="csvFile" accept=".csv">
+            <button id="uploadCsv" class="btn primary">Upload</button>
+          </div>
+          
+          <div class="import-option">
+            <h4>Import from Google Sheet</h4>
+            <input type="text" id="sheetUrl" placeholder="Google Sheet URL">
+            <button id="importSheet" class="btn primary">Import</button>
+          </div>
+          
+          <div class="data-preview">
+            <h4>Data Preview</h4>
+            <div class="data-table-container">
+              <table id="dataTable">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Company</th>
+                    <th>Profile URL</th>
+                    <th>Message</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Data rows will be added here -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <footer>
+      <p>Use responsibly and respect Facebook's terms of service</p>
+    </footer>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
