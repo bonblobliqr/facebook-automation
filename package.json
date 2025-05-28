@@ -1,1 +1,15 @@
-ewogICJuYW1lIjogImZhY2Vib29rLWF1dG9tYXRpb24tdG9vbCIsCiAgInZlcnNpb24iOiAiMS4wLjAiLAogICJkZXNjcmlwdGlvbiI6ICJBdXRvbWF0ZSBGYWNlYm9vayBtZXNzYWdpbmcgYmFzZWQgb24gR29vZ2xlIFNoZWV0cyBkYXRhIG9yIENTViBmaWxlcy4iLAogICJtYWluIjogImJhY2tncm91bmQuanMiLAogICJzY3JpcHRzIjogewogICAgInN0YXJ0IjogImVjaG8gJ0xvYWQgdGhlIGV4dGVuc2lvbiBpbiBDaHJvbWUgYnkgZ29pbmcgdG8gY2hyb21lOi8vZXh0ZW5zaW9ucywgZW5hYmxpbmcgRGV2ZWxvcGVyIG1vZGUsIGFuZCBjbGlja2luZyBMb2FkIHVucGFja2VkJyIKICB9LAogICJhdXRob3IiOiAiWW91ciBOYW1lIiwKICAibGljZW5zZSI6ICJNSVQiLAogICJkZXBlbmRlbmNpZXMiOiB7CiAgICAiY2hyb21lLWV4dGVuc2lvbi1jbGkiOiAiXjMuMC4wIgogIH0KfQo=
+{
+  "name": "facebook-automation-tool",
+  "version": "1.0.0",
+  "description": "Automate Facebook messaging based on Google Sheets data or CSV files.",
+  "private": true,
+  "scripts": {
+    "build": "echo 'No build step required for Chrome extension'",
+    "start": "echo 'Load the extension in Chrome by going to chrome://extensions, enabling Developer mode, and clicking Load unpacked'"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.42.0"
+  }
+}
